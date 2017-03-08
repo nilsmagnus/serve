@@ -18,7 +18,7 @@ Serve static files on http from command line
    
 Or download binary:
 
-- [For ubuntu](dist/ubuntu/serve)
-- [For darwin](dist/darwin/serve)
-- [For windows](dist/win/serve.exe)
+- [For linux 386](dist/linux/serve)
+- [For darwin 386](dist/darwin/serve)
+- [For windows 386](dist/win/serve.exe)
 
