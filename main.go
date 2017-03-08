@@ -23,5 +23,5 @@ func main() {
 
 	http.Handle("/", http.FileServer(http.Dir(folder)))
 
-	http.ListenAndServe(":8081", nil)
+	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 }
