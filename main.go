@@ -15,10 +15,10 @@ func main() {
 	folder:= flag.String( "folder", currentDir, "folder to serve, defaults to current")
 	flag.Parse()
 
-	fmt.Printf("Serving %v on port %d\n", folder, port)
+	fmt.Printf("Serving %v on port %d\n", *folder, port)
 	fmt.Println("Press ctrl-c to end")
 
-	http.Handle("/", http.FileServer(http.Dir(folder)))
+	http.Handle("/", http.FileServer(http.Dir(*folder)))
 
 	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 }
