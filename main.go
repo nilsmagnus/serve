@@ -7,15 +7,12 @@ import (
 	"fmt"
 )
 
-var port int
-var folder string
-
 func main() {
 
 	currentDir, _ := os.Getwd()
 
-	flag.IntVar(&port, "port", 8080, "http port")
-	flag.StringVar(&folder, "folder", currentDir, "folder to serve, defaults to current")
+	port:= flag.Int( "port", 8080, "http port")
+	folder:= flag.String( "folder", currentDir, "folder to serve, defaults to current")
 	flag.Parse()
 
 	fmt.Printf("Serving %v on port %d\n", folder, port)
